@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Evolution Timeline visual style preview for What If Labs">
+<title>Evolution Timeline — What If Labs visual style</title>
+<defs><linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070f24"/><stop offset=".6" stop-color="#122743"/><stop offset="1" stop-color="#070d1e"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#bfd6ff" stroke-opacity=".085" fill="none"/></pattern><linearGradient id="titleBackground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1227" stop-opacity=".82"/><stop offset="1" stop-color="#060d1c" stop-opacity="1"/></linearGradient></defs>
+<rect width="960" height="600" fill="url(#background)"/><rect width="960" height="600" fill="url(#grid)"/>
+<path d="M50 49H124" stroke="#bce777" stroke-width="5"/><text x="145" y="57" fill="#dbe8ff" font-size="23" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="2">WHAT IF LABS</text>
+<text x="845" y="57" fill="#bce777" font-size="22" font-family="Arial,sans-serif" font-weight="bold">09/10</text>
+<g stroke="#9dc56d" fill="none"><path d="M113 343H837" stroke-width="5"/><path d="M210 343V276M480 343V246M744 343V271" stroke-width="4"/></g>
+<g fill="#bfe983"><circle cx="210" cy="343" r="12"/><circle cx="480" cy="343" r="12"/><circle cx="744" cy="343" r="12"/></g>
+<g transform="translate(210 219)" fill="#80b58b" stroke="#c1e99f" stroke-width="4" stroke-linejoin="round">
+<ellipse cx="-3" cy="18" rx="69" ry="35"/><path d="M-61 28L-110 56L-65 3Z"/><path d="M44 1L69-38L93-24L90-6L63 22Z"/><circle cx="75" cy="-23" r="5" fill="#092436" stroke="none"/><path d="M-30 41V66M31 40V66"/></g>
+<g transform="translate(480 194)" fill="#a3c873" stroke="#d1f89f" stroke-width="4" stroke-linejoin="round"><ellipse cx="-6" cy="29" rx="68" ry="43"/><path d="M-60 13L-122-20L-91 39Z"/><path d="M38-4L59-75L86-63L66 28Z"/><circle cx="73" cy="-66" r="5" fill="#082b3a" stroke="none"/><path d="M-43 64L-47 91M30 65L40 91"/></g>
+<g transform="translate(743 199)" fill="#bfe394" stroke="#e5ffbe" stroke-width="4" stroke-linejoin="round"><path d="M-70 15Q-62-48 11-34Q72-25 60 28Q28 68-36 50Z"/><path d="M-55 20L-101 53L-83-9Z"/><path d="M32-29L62-69L83-55L52 10Z"/><circle cx="68" cy="-52" r="5" fill="#102d39" stroke="none"/><path d="M-28 49V80M30 48V81"/></g>
+<g font-family="Arial" font-size="20" font-weight="bold" fill="#d0e6c2"><text x="158" y="394">EARLIER</text><text x="423" y="394">BRANCH</text><text x="689" y="394">LATER</text></g>
+<path d="M228 318Q354 262 468 318M491 320Q617 263 734 320" stroke="#bfd978" stroke-width="2" stroke-dasharray="8 13" fill="none" opacity=".7"/>
+<rect x="0" y="445" width="960" height="155" fill="url(#titleBackground)"/>
+<path d="M50 465H910" stroke="#bce777" stroke-opacity=".55" stroke-width="2"/>
+<text x="52" y="516" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff">Evolution Timeline</text>
+<text x="53" y="556" font-family="Arial,sans-serif" font-size="24" fill="#bce777">Time steps • branching change</text></svg>

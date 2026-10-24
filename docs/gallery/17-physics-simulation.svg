@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Physics Simulation visual style preview for What If Labs">
+<title>Physics Simulation — What If Labs visual style</title>
+<defs><linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070f24"/><stop offset=".6" stop-color="#122743"/><stop offset="1" stop-color="#070d1e"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#bfd6ff" stroke-opacity=".085" fill="none"/></pattern><linearGradient id="titleBackground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1227" stop-opacity=".82"/><stop offset="1" stop-color="#060d1c" stop-opacity="1"/></linearGradient></defs>
+<rect width="960" height="600" fill="url(#background)"/><rect width="960" height="600" fill="url(#grid)"/>
+<path d="M50 49H124" stroke="#a6a0ff" stroke-width="5"/><text x="145" y="57" fill="#dbe8ff" font-size="23" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="2">WHAT IF LABS</text>
+<text x="845" y="57" fill="#a6a0ff" font-size="22" font-family="Arial,sans-serif" font-weight="bold">06/10</text>
+<g stroke="#628ce9" stroke-width="2" fill="none" opacity=".55">
+<path d="M112 115Q468 30 836 115M112 159Q468 67 836 159M112 207Q468 108 836 207M112 256Q468 169 836 256M112 301Q468 229 836 301M112 353Q468 294 836 353"/>
+<path d="M125 110Q210 222 130 366M254 84Q318 233 257 366M372 68Q391 266 376 376M490 65V377M612 75Q581 253 610 367M739 92Q667 239 740 369M832 107Q742 218 831 364"/>
+</g>
+<g transform="translate(477 208)"><ellipse ry="74" rx="200" fill="#342e84" fill-opacity=".4" stroke="#aea6ff" stroke-width="3"/><circle r="95" fill="#4145c0" fill-opacity=".65" stroke="#cfbcff" stroke-width="5"/><circle cx="-26" cy="-27" r="38" fill="#8f91fb" opacity=".24"/><path d="M-80-36C-8-80 42-19 76-55M-88 25C-8-5 27 67 79 26" fill="none" stroke="#d6d2ff" stroke-width="8" stroke-linecap="round" opacity=".65"/></g>
+<g fill="#c3bbff"><circle cx="270" cy="208" r="10"/><circle cx="680" cy="208" r="10"/></g>
+<path d="M700 211L790 188H848" stroke="#b4afff" stroke-width="3" fill="none"/><text x="724" y="174" fill="#e0daff" font-size="21" font-family="Arial">FIELD MODEL</text>
+<rect x="0" y="445" width="960" height="155" fill="url(#titleBackground)"/>
+<path d="M50 465H910" stroke="#a6a0ff" stroke-opacity=".55" stroke-width="2"/>
+<text x="52" y="516" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff">Physics Simulation</text>
+<text x="53" y="556" font-family="Arial,sans-serif" font-size="24" fill="#a6a0ff">Field lines • forces and spacetime</text></svg>
