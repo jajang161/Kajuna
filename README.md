@@ -94,6 +94,18 @@ Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?
 
 <sub><b>What If Labs reference previews:</b> The ten What If Labs styles above are original SVG concept previews in this fork, not built-in motion presets. An alternate <a href="docs/gallery/13-cosmic-scale.svg">cosmic scale concept</a> is also available. All original Bang Motion styles remain unchanged. <a href="docs/what-if-labs-style-guide.md">See the What If Labs style guide</a> for motion ideas, safe scientific framing, and implementation notes.</sub>
 
+## Kajuna: What If Labs and Higgsfield MCP
+
+This fork includes an **optional agent handoff** for science explainers. Bang Motion still supplies camera motion, scene composition, animation timing, and its browser `index.html` output. The **ten What If Labs SVG previews are style references**, not functional animated presets.
+
+When explicitly creating a What If Labs episode, the agent should:
+1. Read the [Kajuna → Higgsfield MCP bridge](references/what-if-labs-higgsfield-mcp.md) and [visual style catalog](docs/what-if-labs-style-guide.md).
+2. Pick a topic-appropriate visual language, storyboard the motion, and build deterministic motion graphics with Bang Motion where appropriate.
+3. Use connected **Higgsfield MCP** generation tools *only when available and authorized* for imagery, footage or audio; keep costs, supported duration/ratio and job status explicit.
+4. Check continuity, factual/hypothetical labels, voice-over synchronization, and video quality before delivery.
+
+> **Integration status:** instructions and links are included in this repository. They do **not** install/connect Higgsfield, automatically load into a running agent, implement new GSAP presets, or guarantee one-click video generation. To use the bridge, refresh/reload the local skill so the agent reads this fork's updated `SKILL.md`; connect Higgsfield MCP separately.
+
 ## The menus behind the looks
 
 <details>
