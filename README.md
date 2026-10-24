@@ -74,9 +74,25 @@ Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?
 <td><img src="docs/gallery/13-science-scale.svg" alt="Scientific Scale — What If Labs science explainer preview"><br><b>Scientific scale</b> · science explainer<br><sub>Wide-to-macro camera travel, a scale comparison, and a clear visual reveal. Space, anatomy, physics, education.</sub></td>
 <td><img src="docs/gallery/14-geographic-infographic.svg" alt="Geographic Infographic — What If Labs map explainer preview"><br><b>Geographic infographic</b> · map explainer<br><sub>Highlighted regions, moving routes, and causal callouts that live inside a map. Geography, history, nature.</sub></td>
 </tr>
+<tr>
+<td><img src="docs/gallery/15-anatomy-cutaway.svg" alt="Anatomy Cutaway — What If Labs visual preview"><br><b>Anatomy Cutaway</b> · body explainer<br><sub>Transparent anatomy layers and annotated organ systems. Human biology, health, and physiology.</sub></td>
+<td><img src="docs/gallery/16-microverse-journey.svg" alt="Microverse Journey — What If Labs visual preview"><br><b>Microverse Journey</b> · microscopic explainer<br><sub>A continuous zoom from cells into DNA, proteins, and molecular structures. Biology and materials.</sub></td>
+</tr>
+<tr>
+<td><img src="docs/gallery/17-physics-simulation.svg" alt="Physics Simulation — What If Labs visual preview"><br><b>Physics Simulation</b> · physics explainer<br><sub>Visual force fields, wave motion, and gravity grids as clearly labeled models, not measured outputs.</sub></td>
+<td><img src="docs/gallery/18-exploded-mechanism.svg" alt="Exploded Mechanism — What If Labs visual preview"><br><b>Exploded Mechanism</b> · engineering explainer<br><sub>Exploded-view components of satellites, robots, and machines. Technology and future engineering.</sub></td>
+</tr>
+<tr>
+<td><img src="docs/gallery/19-cause-effect-puzzle.svg" alt="Cause & Effect Puzzle — What If Labs visual preview"><br><b>Cause & Effect Puzzle</b> · causal explainer<br><sub>Puzzle-like pieces reconfigure to reveal a physical system and an evidence-based cause-and-effect chain.</sub></td>
+<td><img src="docs/gallery/20-evolution-timeline.svg" alt="Evolution Timeline — What If Labs visual preview"><br><b>Evolution Timeline</b> · natural history explainer<br><sub>Branching time markers and separate reconstructed species, without implying a simplistic linear evolution.</sub></td>
+</tr>
+<tr>
+<td><img src="docs/gallery/21-alternate-history.svg" alt="Alternate History — What If Labs visual preview"><br><b>Alternate History</b> · history explainer<br><sub>Side-by-side documented history and explicit 'what if' possibilities with distinct maps and timelines.</sub></td>
+<td><img src="docs/gallery/22-exoplanet-ecosystem.svg" alt="Exoplanet Ecosystem — What If Labs visual preview"><br><b>Exoplanet Ecosystem</b> · exobiology explainer<br><sub>Clearly hypothetical ecosystems shaped by a planet's proposed light, gravity, and atmosphere.</sub></td>
+</tr>
 </table>
 
-<sub><b>What If Labs reference previews:</b> The two additional styles above are original SVG examples in this fork, not built-in motion presets. An alternate <a href="docs/gallery/13-cosmic-scale.svg">cosmic scale concept</a> is also available. All original Bang Motion styles remain unchanged.</sub>
+<sub><b>What If Labs reference previews:</b> The ten What If Labs styles above are original SVG concept previews in this fork, not built-in motion presets. An alternate <a href="docs/gallery/13-cosmic-scale.svg">cosmic scale concept</a> is also available. All original Bang Motion styles remain unchanged. <a href="docs/what-if-labs-style-guide.md">See the What If Labs style guide</a> for motion ideas, safe scientific framing, and implementation notes.</sub>
 
 ## The menus behind the looks
 

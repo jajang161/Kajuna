@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Alternate History visual style preview for What If Labs">
+<title>Alternate History — What If Labs visual style</title>
+<defs><linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070f24"/><stop offset=".6" stop-color="#122743"/><stop offset="1" stop-color="#070d1e"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#bfd6ff" stroke-opacity=".085" fill="none"/></pattern><linearGradient id="titleBackground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1227" stop-opacity=".82"/><stop offset="1" stop-color="#060d1c" stop-opacity="1"/></linearGradient></defs>
+<rect width="960" height="600" fill="url(#background)"/><rect width="960" height="600" fill="url(#grid)"/>
+<path d="M50 49H124" stroke="#fcb77f" stroke-width="5"/><text x="145" y="57" fill="#dbe8ff" font-size="23" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="2">WHAT IF LABS</text>
+<text x="845" y="57" fill="#fcb77f" font-size="22" font-family="Arial,sans-serif" font-weight="bold">10/10</text>
+<rect x="95" y="74" width="358" height="307" rx="24" fill="#4a352d" stroke="#d8a16e" stroke-width="3"/>
+<rect x="507" y="74" width="358" height="307" rx="24" fill="#172e55" stroke="#7dddf8" stroke-width="3"/>
+<g fill="#e1c09a" opacity=".86"><path d="M140 314V213L174 205V162H211V209L253 199V260H278V183H327V252H365V314Z"/><rect x="184" y="131" width="25" height="41"/></g>
+<g fill="#9de7ff" opacity=".75"><path d="M538 318V227H584V164H634V260H649V119H696V249H710V177H760V258H819V318Z"/><path d="M545 224H818" stroke="#c9eafd" stroke-width="3" fill="none"/></g>
+<g stroke="#ffe4b0" stroke-width="3" fill="none"><path d="M145 350H404M557 350H816"/></g>
+<g font-size="22" fill="#ffdfb7" font-family="Arial" font-weight="bold"><text x="137" y="115">DOCUMENTED</text><text x="556" y="115" fill="#bcf1ff">WHAT IF?</text></g>
+<circle cx="480" cy="237" r="25" fill="#ffdc90"/><path d="M454 237H505M480 211V262" stroke="#60462f" stroke-width="4"/>
+<path d="M388 406L472 383L554 406" fill="none" stroke="#ffbd80" stroke-width="4" stroke-dasharray="12 9"/>
+<rect x="0" y="445" width="960" height="155" fill="url(#titleBackground)"/>
+<path d="M50 465H910" stroke="#fcb77f" stroke-opacity=".55" stroke-width="2"/>
+<text x="52" y="516" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff">Alternate History</text>
+<text x="53" y="556" font-family="Arial,sans-serif" font-size="24" fill="#fcb77f">Recorded history ↔ hypothetical branch</text></svg>

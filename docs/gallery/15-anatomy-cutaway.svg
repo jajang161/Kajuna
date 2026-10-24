@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-label="Anatomy Cutaway visual style preview for What If Labs">
+<title>Anatomy Cutaway — What If Labs visual style</title>
+<defs><linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070f24"/><stop offset=".6" stop-color="#122743"/><stop offset="1" stop-color="#070d1e"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" stroke="#bfd6ff" stroke-opacity=".085" fill="none"/></pattern><linearGradient id="titleBackground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1227" stop-opacity=".82"/><stop offset="1" stop-color="#060d1c" stop-opacity="1"/></linearGradient></defs>
+<rect width="960" height="600" fill="url(#background)"/><rect width="960" height="600" fill="url(#grid)"/>
+<path d="M50 49H124" stroke="#ff879e" stroke-width="5"/><text x="145" y="57" fill="#dbe8ff" font-size="23" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="2">WHAT IF LABS</text>
+<text x="845" y="57" fill="#ff879e" font-size="22" font-family="Arial,sans-serif" font-weight="bold">04/10</text>
+<g transform="translate(476 56)" stroke-linejoin="round">
+<path d="M-76 32Q-137 54-149 110L-136 305H135L149 110Q136 54 76 32L50 18V-18H-49V18Z" fill="#213b59" stroke="#9cc9df" stroke-width="5" opacity=".94"/>
+<path d="M-12 45V120" fill="none" stroke="#91ebf5" stroke-width="15" stroke-linecap="round"/>
+<path d="M-21 111C-81 55-120 108-99 188C-86 229-38 234-17 193Z" fill="#d95e7e" fill-opacity=".84" stroke="#ffb0b9" stroke-width="4"/>
+<path d="M21 111C81 55 120 108 99 188C86 229 38 234 17 193Z" fill="#e87898" fill-opacity=".84" stroke="#ffb0b9" stroke-width="4"/>
+<path d="M0 168C-23 130-69 146-61 184C-58 207-28 234 0 261C28 234 58 207 61 184C69 146 23 130 0 168Z" fill="#b91d52" stroke="#ffc3cc" stroke-width="4"/>
+<path d="M-36 45Q-49 91-72 108M36 45Q49 91 72 108" stroke="#92c5eb" stroke-width="4" fill="none"/>
+<rect x="-163" y="24" width="326" height="294" rx="28" fill="none" stroke="#8be9f3" stroke-opacity=".34" stroke-dasharray="12 10" stroke-width="3"/>
+</g>
+<path d="M503 223L643 165H767M405 200L279 265H177" fill="none" stroke="#9be6f7" stroke-width="3"/>
+<g fill="#b9eefa" font-family="Arial,sans-serif" font-size="21" font-weight="bold"><text x="662" y="155">CARDIAC LAYER</text><text x="171" y="255">RESPIRATORY</text></g>
+<circle cx="503" cy="223" r="7" fill="#ffe3e9"/><circle cx="405" cy="200" r="7" fill="#ffe3e9"/>
+<rect x="0" y="445" width="960" height="155" fill="url(#titleBackground)"/>
+<path d="M50 465H910" stroke="#ff879e" stroke-opacity=".55" stroke-width="2"/>
+<text x="52" y="516" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#ffffff">Anatomy Cutaway</text>
+<text x="53" y="556" font-family="Arial,sans-serif" font-size="24" fill="#ff879e">Layer reveal • camera through anatomy</text></svg>
