@@ -69,7 +69,14 @@ Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?
 <td><img src="docs/gallery/06-cartoon-stage.jpg" alt="Cartoon stage explainer"><br><b>Cartoon stage</b> · explainer<br><sub>One living stage per scene, jointed characters, no captions. Education with characters.</sub></td>
 <td><img src="docs/gallery/12-more-combinations.jpg" alt="Style brief with three concept candidates and one recommended pick"><br><b>…and many more</b><br><sub>10 styles × 19 concepts × 9 render families — three candidates, one pick.</sub></td>
 </tr>
+<!-- What If Labs: optional, original style gallery preserved above. -->
+<tr>
+<td><img src="docs/gallery/13-science-scale.svg" alt="Scientific Scale — What If Labs science explainer preview"><br><b>Scientific scale</b> · science explainer<br><sub>Wide-to-macro camera travel, a scale comparison, and a clear visual reveal. Space, anatomy, physics, education.</sub></td>
+<td><img src="docs/gallery/14-geographic-infographic.svg" alt="Geographic Infographic — What If Labs map explainer preview"><br><b>Geographic infographic</b> · map explainer<br><sub>Highlighted regions, moving routes, and causal callouts that live inside a map. Geography, history, nature.</sub></td>
+</tr>
 </table>
+
+<sub><b>What If Labs reference previews:</b> The two additional styles above are original SVG examples in this fork, not built-in motion presets. An alternate <a href="docs/gallery/13-cosmic-scale.svg">cosmic scale concept</a> is also available. All original Bang Motion styles remain unchanged.</sub>
 
 ## The menus behind the looks
 
