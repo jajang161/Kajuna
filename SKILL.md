@@ -10,16 +10,16 @@ metadata:
   homepage: https://github.com/bangtutorial/bang-motion
 ---
 
-# Bang Motion — motion graphic web yang bukan PPT
+# Brew Production — motion graphic web yang bukan PPT
 
-**v1.19.0 · by [Bang Tutorial](https://youtube.com/bangtutorial) · MIT.** Riwayat perubahan di `CHANGELOG.md`;
+**v1.19.0 · Brew Production, berbasis [Bang Motion](https://github.com/bangtutorial/bang-motion) oleh [Bang Tutorial](https://youtube.com/bangtutorial) · MIT.** Riwayat perubahan di `CHANGELOG.md`;
 cara pasang di `README.md`.
 
 Skill ini untuk AI coding agent apa pun (format Agent Skills terbuka).
 Isinya hukum dan resep untuk motion graphic yang bergerak seperti video, bukan
 presentasi — patuhi sebelum menulis kode.
 
-## Ekstensi opsional Kajuna — What If Labs + Higgsfield MCP
+## Ekstensi opsional Brew Production — What If Labs + Higgsfield MCP
 
 **Hanya saat user meminta proyek/episode What If Labs atau penggunaan gaya What If Labs**, baca lebih dahulu `references/what-if-labs-higgsfield-mcp.md` dan `docs/what-if-labs-style-guide.md`. Pilih gaya dari sepuluh pratinjau SVG di `docs/gallery/` sesuai topik dan gunakan prinsip gerak Bang Motion (kamera, timeline, subject continuity, anti-PPT). Jika Higgsfield MCP tersedia, gunakan untuk **aset gambar/video/audio** sesuai izin dan batas kredit user. Jika tidak tersedia, lanjutkan dengan aset yang ada dan hasil browser `index.html` seperti biasa; jangan mengaku aset atau video sudah dibuat.
 
