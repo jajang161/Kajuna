@@ -26,7 +26,7 @@ export function chooseVisualStyles(topic){
 }
 const allowedShots=new Set(['establishing','explanation','consequence','reveal']);
 const allowedTransitions=new Set(['cut','match-cut','object-wipe','diagram-transform','camera-follow','push-through','zoom-to-detail','pullback']);
-const words=s=>String(s||'').toLowerCase().replace(/[^\\p{L}\\p{N}]+/gu,' ').trim();
+const words=s=>String(s||'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
 const tokens=s=>new Set(words(s).split(' ').filter(w=>w.length>3));
 function similarity(a,b){const x=tokens(a),y=tokens(b);if(!x.size||!y.size)return 0;let common=0;for(const t of x)if(y.has(t))common++;return common/Math.min(x.size,y.size);}
 export function validateEpisode(plan,{strict=true}={}){
@@ -39,7 +39,7 @@ export function validateEpisode(plan,{strict=true}={}){
   if(s.id!==i+1||s.clip!==Math.floor(i/4)+1||Math.abs(s.start-start)>1e-4||Math.abs(s.end-start-2.5)>1e-4)errors.push('Scene '+(i+1)+': timing/id/clip mismatch');
   for(const key of ['visual','narration_en','translation_id'])if(typeof s[key]!=='string'||!s[key].trim())errors.push('Scene '+(i+1)+': missing '+key);
   const narration=String(s.narration_en||'').trim();
-  if(narration.length>100||narration.split(/\\s+/).length>9)errors.push('Scene '+(i+1)+': narration too long for estimated 2.5s; actual TTS timing must also be checked');
+  if(narration.length>100||narration.split(/\s+/).length>9)errors.push('Scene '+(i+1)+': narration too long for estimated 2.5s; actual TTS timing must also be checked');
   for(const key of ['visual_goal','camera_rule','transition_in','transition_out','shot_type','style','sfx']){
    if(typeof s[key]!=='string'||!s[key].trim())(strict?errors:warnings).push('Scene '+(i+1)+': missing '+key);
   }
