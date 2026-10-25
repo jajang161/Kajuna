@@ -1,0 +1,18 @@
+name: What If Labs Editorial QA
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/what-if-labs-editorial.test.mjs
+      - run: node scripts/validate-what-if-labs-plan.mjs examples/what-if-labs-storyboard.example.json
+      - run: node scripts/what-if-labs-history.mjs check examples/what-if-labs-storyboard.example.json

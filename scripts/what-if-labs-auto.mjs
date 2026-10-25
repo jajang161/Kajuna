@@ -3,6 +3,8 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {resolve,join,dirname} from 'node:path';
 import {spawnSync} from 'node:child_process';
+import {validateEpisode} from './what-if-labs-visual-director.mjs';
+import {auditOriginality} from './what-if-labs-originality.mjs';
 
 const args=process.argv.slice(2),cfg={};
 for(let i=0;i<args.length;i++){
@@ -19,6 +21,14 @@ for(let i=0;i<12;i++){
  for(const k of ['visual','narration_en','translation_id'])if(typeof s[k]!=='string'||!s[k].trim())throw Error('Scene '+s.id+' lacks '+k);
  if(s.narration_en.length>100)throw Error('Shorten narration for scene '+s.id);
 }
+const audit=validateEpisode(plan);
+if(!audit.ok)throw Error('Visual QA failed before API calls:\n'+audit.errors.join('\n'));
+for(const warning of audit.warnings)console.warn('Visual QA warning: '+warning);
+const historyPath=resolve(cfg.history||new URL('../data/what-if-labs-episodes.json',import.meta.url).pathname);
+const history=JSON.parse(await readFile(historyPath,'utf8'));
+const originality=auditOriginality(plan,history);
+if(!originality.ok)throw Error('Originality / policy preflight failed before API calls:\n'+originality.errors.join('\n'));
+for(const warning of originality.warnings)console.warn('Editorial review warning: '+warning);
 const out=resolve(cfg.out||join(dirname(input),'what-if-labs-output'));
 await mkdir(out,{recursive:true});
 const ss=n=>{let v=Math.round(n*1000);const h=Math.floor(v/3600000);v%=3600000;const m=Math.floor(v/60000);v%=60000;return [h,m,Math.floor(v/1000)].map(x=>String(x).padStart(2,'0')).join(':')+','+String(v%1000).padStart(3,'0')};
