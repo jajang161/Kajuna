@@ -27,6 +27,12 @@ Jika pengguna meminta suara, jangan sepihak membuat animasi tanpa suara. Siapkan
 
 Izin menjalankan perintah Codex adalah mekanisme keamanan platform yang tidak dapat dimatikan melalui skill; gabungkan operasi aman jika memungkinkan tanpa melewati kontrol izin.
 
+## What If Labs — ElevenLabs otomatis (opsional)
+
+**Hanya untuk What If Labs:** baca `docs/what-if-labs-elevenlabs.md` dan gunakan `scripts/what-if-labs-auto.mjs` sebagai alur audio/video bila user memilih ElevenLabs. Rancang visual + narasi Inggris singkat + terjemahan Indonesia + cue SFX sebagai **12 adegan**, 3 klip × 10 detik (masing-masing empat adegan 2,5 detik). Buat `index.html` 9:16 tepat 30 detik menggunakan motion timeline Bang Motion, dan manifest episode mengikuti `examples/what-if-labs-storyboard.example.json`. Terjemahkan secara semantik dan cek fakta; API ElevenLabs **hanya TTS/SFX**, bukan otomatis menulis terjemahan atau animasi. Validasi manifest tanpa biaya terlebih dahulu; jika key, voice ID atau lingkungan belum tersedia, jangan mengklaim video siap.
+
+Jangan membuat audio terpotong: setiap respons suara harus muat dalam jendela adegan dan dicek dari alignment ElevenLabs serta FFprobe. Jika berlebih, ringkas naskah, minta persetujuan penggunaan kredit tambahan sebelum regenerasi. Subtitle EN memakai durasi suara asli, subtitle ID mengikuti scene; render MP4 nyata dan dengarkan hasil sebelum menyerahkan. Jangan menyimpan API key di repo, ZIP, atau chat. **Konten What If Labs internasional bersuara Inggris secara default**, jangan mengalihkan ke opsi CapCut manual kecuali user meminta.
+
 ## Ekstensi opsional Brew Production — What If Labs + Higgsfield MCP
 
 **Hanya saat user meminta proyek/episode What If Labs atau penggunaan gaya What If Labs**, baca lebih dahulu `references/what-if-labs-higgsfield-mcp.md` dan `docs/what-if-labs-style-guide.md`. Pilih gaya dari sepuluh pratinjau SVG di `docs/gallery/` sesuai topik dan gunakan prinsip gerak Bang Motion (kamera, timeline, subject continuity, anti-PPT). Jika Higgsfield MCP tersedia, gunakan untuk **aset gambar/video/audio** sesuai izin dan batas kredit user. Jika tidak tersedia, lanjutkan dengan aset yang ada dan hasil browser `index.html` seperti biasa; jangan mengaku aset atau video sudah dibuat.
