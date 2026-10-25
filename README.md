@@ -42,6 +42,18 @@ It also stops every project from looking the same. The look is **derived from yo
 
 Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?debug=1` for a scrub bar, and an optional frame-by-frame export to MP4.
 
+## MP4 video export and audio (Brew Production)
+
+For a **downloadable video**, deliver an actual H.264 MP4 rather than HTML or a ZIP alone. The Brew Production fork provides a rendering pipeline that captures HTML frames with Puppeteer, encodes them using FFmpeg, optionally mixes supplied narration/music/SFX, and validates the resulting video with FFprobe.
+
+```bash
+node scripts/render-video.mjs --project ./my-animation --output ./my-animation/video.mp4 \
+  --width 1920 --height 1080 --fps 30 \
+  --narration ./my-animation/voice.wav --music ./my-animation/music.mp3 --require-audio
+```
+
+Audio requires actual licensed media files; this repository does not create text-to-speech by itself. See **[MP4 and audio export guide](docs/export-mp4-audio.md)** for prerequisites and limitations. Codex terminal approval prompts are platform security controls and cannot be bypassed by repository code.
+
 ## Style gallery
 
 > Each frame below is a **single static scene** built for this README with **fictional brands and data**. The portrait, product photos, port photo, engraving, and cartoon cutouts were generated with GPT Image 2.5; everything else is HTML, CSS, and SVG. Real projects take their palette, type, and imagery from your brand.
@@ -304,7 +316,9 @@ assets/
   starter-explainer*.html        one starter per explainer style
 scripts/
   snap.mjs                       verify: capture key seconds
-  export-frames.mjs              export: frame-by-frame PNG → MP4
+  export-frames.mjs              capture deterministic PNG frames
+  encode-mp4.mjs                 encode verified H.264/AAC MP4
+  render-video.mjs               render local HTML directly to MP4
   vo-pauses.html                 voice-over pause detection, no ffmpeg needed
   serve.py                       no-cache dev server (optional)
   ae/bridge/                     After Effects bridge helpers
