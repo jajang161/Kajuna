@@ -17,7 +17,9 @@
       "style": "scientific-scale",
       "camera_rule": "locked wide",
       "transition_in": "cut",
-      "transition_out": "cut"
+      "transition_out": "cut",
+      "visual_mechanism": "wide orbital reveal",
+      "on_screen_text": ""
     },
     {
       "id": 2,
@@ -34,7 +36,9 @@
       "style": "scientific-scale",
       "camera_rule": "slow push",
       "transition_in": "cut",
-      "transition_out": "match-cut"
+      "transition_out": "match-cut",
+      "visual_mechanism": "tracked approach",
+      "on_screen_text": ""
     },
     {
       "id": 3,
@@ -51,7 +55,9 @@
       "style": "physics-simulation",
       "camera_rule": "top-down orbit",
       "transition_in": "match-cut",
-      "transition_out": "diagram-transform"
+      "transition_out": "diagram-transform",
+      "visual_mechanism": "scale comparison",
+      "on_screen_text": ""
     },
     {
       "id": 4,
@@ -68,7 +74,9 @@
       "style": "scientific-scale",
       "camera_rule": "lateral tracking",
       "transition_in": "diagram-transform",
-      "transition_out": "camera-follow"
+      "transition_out": "camera-follow",
+      "visual_mechanism": "lens transition",
+      "on_screen_text": ""
     },
     {
       "id": 5,
@@ -85,7 +93,9 @@
       "style": "scientific-scale",
       "camera_rule": "wide arc",
       "transition_in": "camera-follow",
-      "transition_out": "object-wipe"
+      "transition_out": "object-wipe",
+      "visual_mechanism": "orbital pullback",
+      "on_screen_text": ""
     },
     {
       "id": 6,
@@ -102,7 +112,9 @@
       "style": "scientific-scale",
       "camera_rule": "macro dolly",
       "transition_in": "object-wipe",
-      "transition_out": "push-through"
+      "transition_out": "push-through",
+      "visual_mechanism": "layered gravity field",
+      "on_screen_text": ""
     },
     {
       "id": 7,
@@ -119,7 +131,9 @@
       "style": "physics-simulation",
       "camera_rule": "orthographic locked",
       "transition_in": "push-through",
-      "transition_out": "zoom-to-detail"
+      "transition_out": "zoom-to-detail",
+      "visual_mechanism": "tracked vector path",
+      "on_screen_text": ""
     },
     {
       "id": 8,
@@ -136,7 +150,9 @@
       "style": "scientific-scale",
       "camera_rule": "rack focus",
       "transition_in": "zoom-to-detail",
-      "transition_out": "pullback"
+      "transition_out": "pullback",
+      "visual_mechanism": "3d scale sweep",
+      "on_screen_text": ""
     },
     {
       "id": 9,
@@ -153,7 +169,9 @@
       "style": "scientific-scale",
       "camera_rule": "angled wide",
       "transition_in": "pullback",
-      "transition_out": "cut"
+      "transition_out": "cut",
+      "visual_mechanism": "outcome split",
+      "on_screen_text": ""
     },
     {
       "id": 10,
@@ -170,7 +188,9 @@
       "style": "scientific-scale",
       "camera_rule": "low track",
       "transition_in": "cut",
-      "transition_out": "match-cut"
+      "transition_out": "match-cut",
+      "visual_mechanism": "trajectory contrast",
+      "on_screen_text": ""
     },
     {
       "id": 11,
@@ -187,7 +207,9 @@
       "style": "physics-simulation",
       "camera_rule": "measured pullback",
       "transition_in": "match-cut",
-      "transition_out": "diagram-transform"
+      "transition_out": "diagram-transform",
+      "visual_mechanism": "system reveal",
+      "on_screen_text": ""
     },
     {
       "id": 12,
@@ -204,7 +226,9 @@
       "style": "scientific-scale",
       "camera_rule": "locked overview",
       "transition_in": "diagram-transform",
-      "transition_out": "cut"
+      "transition_out": "cut",
+      "visual_mechanism": "final perspective",
+      "on_screen_text": ""
     }
   ],
   "topic": "space",
@@ -221,5 +245,10 @@
   "scientific_sources": [
     "https://science.nasa.gov/moon/"
   ],
-  "publication_status": "planned"
+  "publication_status": "planned",
+  "visual_quality_profile": "cinematic-3d",
+  "narration_delivery": "natural-conversational",
+  "final_voice_engine": "neural-voice",
+  "visual_qc_required": true,
+  "production_overlay_visible": false
 }
