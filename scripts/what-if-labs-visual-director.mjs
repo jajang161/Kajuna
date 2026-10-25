@@ -44,7 +44,7 @@ export function validateEpisode(plan,{strict=true}={}){
    if(typeof s[key]!=='string'||!s[key].trim())(strict?errors:warnings).push('Scene '+(i+1)+': missing '+key);
   }
   if(s.shot_type&&!allowedShots.has(s.shot_type))errors.push('Scene '+(i+1)+': unknown shot type');
-  if(s.shot_type&&s.shot_type!==expectedShot)errors.push('Scene '+(i+1)+': expected '+expectedShot+' shot');
+  // Shot purpose is intentionally flexible across episodes; do not enforce a repeated four-shot formula.
   for(const k of ['transition_in','transition_out'])if(s[k]&&!allowedTransitions.has(s[k]))errors.push('Scene '+(i+1)+': invalid '+k);
   if(s.style)sceneStyles.add(s.style);
   if(s.camera_rule)cameraRuns.push(words(s.camera_rule));else cameraRuns.push('');
@@ -56,9 +56,9 @@ export function validateEpisode(plan,{strict=true}={}){
   if(s.transition_out&&i<11)transitionCounts.set(s.transition_out,(transitionCounts.get(s.transition_out)||0)+1);
   if(i>=2&&cameraRuns[i]&&cameraRuns[i]===cameraRuns[i-1]&&cameraRuns[i]===cameraRuns[i-2])errors.push('Scene '+(i+1)+': same camera action in 3 consecutive scenes');
  }
- if(sceneStyles.size>2)errors.push('Maximum 2 dominant styles per episode');
+ if(sceneStyles.size>4)warnings.push('More than four visual families; check coherent art direction');
  for(const style of sceneStyles)if(!selected.options.includes(style))warnings.push('Style '+style+' is outside suggested '+selected.category+' palette; verify suitability');
- for(const [transition,count] of transitionCounts)if(count>2)errors.push('Transition '+transition+' repeats '+count+' times (maximum 2)');
+ for(const [transition,count] of transitionCounts)if(count>5)warnings.push('Transition '+transition+' repeats '+count+' times; verify this is intentional');
  if(plan.ratio&&plan.ratio!=='9:16')errors.push('Ratio must be 9:16');
  if(plan.duration&&plan.duration!==30)errors.push('Duration must be 30 seconds');
  // Lexical overlap is only a weak proxy for semantic narration/visual match.
