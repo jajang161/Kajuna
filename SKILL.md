@@ -19,6 +19,14 @@ Skill ini untuk AI coding agent apa pun (format Agent Skills terbuka).
 Isinya hukum dan resep untuk motion graphic yang bergerak seperti video, bukan
 presentasi — patuhi sebelum menulis kode.
 
+## Brew Production — hasil video MP4 dengan audio
+
+Jika pengguna meminta VIDEO yang bisa diunduh, berikan file MP4 yang benar-benar ada, bukan hanya HTML atau ZIP. Simpan HTML sebagai sumber animasi. Panduan: `docs/export-mp4-audio.md`; skrip: `scripts/render-video.mjs` (HTML ke MP4) dan `scripts/encode-mp4.mjs` (PNG ke MP4). Render membutuhkan Puppeteer, FFmpeg, dan FFprobe. Periksa durasi, frame, H.264, serta audio AAC sebelum menyatakan selesai.
+
+Jika pengguna meminta suara, jangan sepihak membuat animasi tanpa suara. Siapkan file narasi, musik, atau efek suara berlisensi terlebih dahulu, kemudian mux ke MP4 dengan `--narration`, `--music`, atau `--sfx` serta `--require-audio`. Skrip ini tidak membuat TTS otomatis. Jangan mengaku video bersuara atau MP4 siap diunduh jika file tersebut belum dibuat dan diverifikasi. Jika alat tidak tersedia, jelaskan keterbatasannya.
+
+Izin menjalankan perintah Codex adalah mekanisme keamanan platform yang tidak dapat dimatikan melalui skill; gabungkan operasi aman jika memungkinkan tanpa melewati kontrol izin.
+
 ## Ekstensi opsional Brew Production — What If Labs + Higgsfield MCP
 
 **Hanya saat user meminta proyek/episode What If Labs atau penggunaan gaya What If Labs**, baca lebih dahulu `references/what-if-labs-higgsfield-mcp.md` dan `docs/what-if-labs-style-guide.md`. Pilih gaya dari sepuluh pratinjau SVG di `docs/gallery/` sesuai topik dan gunakan prinsip gerak Bang Motion (kamera, timeline, subject continuity, anti-PPT). Jika Higgsfield MCP tersedia, gunakan untuk **aset gambar/video/audio** sesuai izin dan batas kredit user. Jika tidak tersedia, lanjutkan dengan aset yang ada dan hasil browser `index.html` seperti biasa; jangan mengaku aset atau video sudah dibuat.
