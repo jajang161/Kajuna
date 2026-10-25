@@ -20,8 +20,12 @@ import { mkdir } from 'node:fs/promises';
 const URL   = process.env.URL   || 'http://127.0.0.1:5178/index.html?clean=1';
 const FPS   = Number(process.env.FPS   || 60);
 const OUT   = process.env.OUT   || 'frames';
-const SCALE = Number(process.env.SCALE || 1);   // 1 = 1920x1080, 0.5 = 960x540
+const SCALE = Number(process.env.SCALE || 1);   // scale for requested viewport
 
+const WIDTH = Number(process.env.WIDTH || 1920);
+const HEIGHT = Number(process.env.HEIGHT || 1080);
+const DURATION_OVERRIDE = process.env.DURATION ? Number(process.env.DURATION) : null;
+if(!Number.isInteger(WIDTH)||!Number.isInteger(HEIGHT)||WIDTH<=0||HEIGHT<=0||!Number.isInteger(FPS)||FPS<=0) throw Error('Invalid viewport or FPS');
 await mkdir(OUT, { recursive: true });
 
 const browser = await puppeteer.launch({
@@ -29,7 +33,7 @@ const browser = await puppeteer.launch({
   args: ['--enable-gpu', '--use-gl=angle', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 const page = await browser.newPage();
-await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: SCALE });
+await page.setViewport({ width: WIDTH, height: HEIGHT, deviceScaleFactor: SCALE });
 await page.goto(URL, { waitUntil: 'networkidle0' });
 
 // tunggu sampai modul selesai dimuat dan timeline terpasang
@@ -37,7 +41,10 @@ await page.waitForFunction('window.OPENER && window.OPENER.ready && (!window.OPE
 await page.evaluate(() => document.fonts.ready);
 await page.evaluate(() => { window.OPENER.tl.pause(0); });
 
-const DURATION = await page.evaluate(() => window.OPENER.DURATION);
+const TIMELINE_DURATION = await page.evaluate(() => window.OPENER.DURATION);
+if(!Number.isFinite(TIMELINE_DURATION)||TIMELINE_DURATION<=0) throw Error('Invalid OPENER.DURATION');
+if(DURATION_OVERRIDE!==null && (!Number.isFinite(DURATION_OVERRIDE)||Math.abs(TIMELINE_DURATION-DURATION_OVERRIDE)>0.05)) throw Error('Timeline duration differs from requested duration: '+TIMELINE_DURATION+' vs '+DURATION_OVERRIDE);
+const DURATION = DURATION_OVERRIDE ?? TIMELINE_DURATION;
 const total = Math.ceil(DURATION * FPS);
 console.log(`${total} frame @ ${FPS} fps (${DURATION}s) -> ${OUT}/`);
 
@@ -54,7 +61,7 @@ for(let i = 0; i < total; i++){
 
   await page.screenshot({
     path: `${OUT}/f${String(i).padStart(5, '0')}.png`,
-    clip: { x: 0, y: 0, width: 1920, height: 1080 },
+    clip: { x: 0, y: 0, width: WIDTH, height: HEIGHT },
     optimizeForSpeed: true,
   });
 
