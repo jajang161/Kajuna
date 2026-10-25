@@ -11,7 +11,13 @@
       "narration_en": "What if the orbit changed?",
       "translation_id": "Bagaimana jika orbitnya berubah?",
       "sfx": "cinematic gentle whoosh",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Cold open: reveal a distant planet",
+      "shot_type": "establishing",
+      "style": "scientific-scale",
+      "camera_rule": "locked wide",
+      "transition_in": "cut",
+      "transition_out": "cut"
     },
     {
       "id": 2,
@@ -22,7 +28,13 @@
       "narration_en": "First, watch the atmosphere.",
       "translation_id": "Pertama, perhatikan atmosfernya.",
       "sfx": "subtle airy swell",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Camera pushes toward the atmosphere",
+      "shot_type": "explanation",
+      "style": "scientific-scale",
+      "camera_rule": "slow push",
+      "transition_in": "cut",
+      "transition_out": "match-cut"
     },
     {
       "id": 3,
@@ -33,7 +45,13 @@
       "narration_en": "The distance matters a lot.",
       "translation_id": "Jarak sangat berpengaruh.",
       "sfx": "soft diagram click",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Comparison diagram of orbital distances",
+      "shot_type": "consequence",
+      "style": "physics-simulation",
+      "camera_rule": "top-down orbit",
+      "transition_in": "match-cut",
+      "transition_out": "diagram-transform"
     },
     {
       "id": 4,
@@ -44,7 +62,13 @@
       "narration_en": "Here's the biggest variable.",
       "translation_id": "Inilah variabel terpenting.",
       "sfx": "quiet highlight ping",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "A bright highlight marks the key variable",
+      "shot_type": "reveal",
+      "style": "scientific-scale",
+      "camera_rule": "lateral tracking",
+      "transition_in": "diagram-transform",
+      "transition_out": "camera-follow"
     },
     {
       "id": 5,
@@ -55,7 +79,13 @@
       "narration_en": "These paths could diverge.",
       "translation_id": "Lintasan ini dapat menyimpang.",
       "sfx": "cinematic gentle whoosh",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Wide view of two orbits",
+      "shot_type": "establishing",
+      "style": "scientific-scale",
+      "camera_rule": "wide arc",
+      "transition_in": "camera-follow",
+      "transition_out": "object-wipe"
     },
     {
       "id": 6,
@@ -66,7 +96,13 @@
       "narration_en": "Gravity changes the motion.",
       "translation_id": "Gravitasi mengubah gerakan.",
       "sfx": "subtle airy swell",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Close-up illustrating gravitational pull",
+      "shot_type": "explanation",
+      "style": "scientific-scale",
+      "camera_rule": "macro dolly",
+      "transition_in": "object-wipe",
+      "transition_out": "push-through"
     },
     {
       "id": 7,
@@ -77,7 +113,13 @@
       "narration_en": "One path remains possible.",
       "translation_id": "Satu lintasan masih mungkin.",
       "sfx": "soft diagram click",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "An arrow traces a possible path",
+      "shot_type": "consequence",
+      "style": "physics-simulation",
+      "camera_rule": "orthographic locked",
+      "transition_in": "push-through",
+      "transition_out": "zoom-to-detail"
     },
     {
       "id": 8,
@@ -88,7 +130,13 @@
       "narration_en": "Scale makes this clearer.",
       "translation_id": "Skala membuatnya lebih jelas.",
       "sfx": "quiet highlight ping",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Scale bars show relative distances",
+      "shot_type": "reveal",
+      "style": "scientific-scale",
+      "camera_rule": "rack focus",
+      "transition_in": "zoom-to-detail",
+      "transition_out": "pullback"
     },
     {
       "id": 9,
@@ -99,18 +147,30 @@
       "narration_en": "Here's one possible outcome.",
       "translation_id": "Ini salah satu hasil yang mungkin.",
       "sfx": "cinematic gentle whoosh",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Alternate outcome A visualized",
+      "shot_type": "establishing",
+      "style": "scientific-scale",
+      "camera_rule": "angled wide",
+      "transition_in": "pullback",
+      "transition_out": "cut"
     },
     {
       "id": 10,
       "clip": 3,
       "start": 22.5,
       "end": 25,
-      "visual": "Alternate outcome B visualized",
+      "visual": "A contrasting escape trajectory appears with a velocity vector",
       "narration_en": "But another result could happen.",
       "translation_id": "Namun hasil lain juga mungkin.",
       "sfx": "subtle airy swell",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "A contrasting escape trajectory appears with a velocity vector",
+      "shot_type": "explanation",
+      "style": "scientific-scale",
+      "camera_rule": "low track",
+      "transition_in": "cut",
+      "transition_out": "match-cut"
     },
     {
       "id": 11,
@@ -121,7 +181,13 @@
       "narration_en": "It all depends on conditions.",
       "translation_id": "Semuanya bergantung pada kondisi.",
       "sfx": "soft diagram click",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "Return to the whole system",
+      "shot_type": "consequence",
+      "style": "physics-simulation",
+      "camera_rule": "measured pullback",
+      "transition_in": "match-cut",
+      "transition_out": "diagram-transform"
     },
     {
       "id": 12,
@@ -132,7 +198,16 @@
       "narration_en": "What would you predict?",
       "translation_id": "Apa prediksi Anda?",
       "sfx": "quiet highlight ping",
-      "sfx_duration": 1
+      "sfx_duration": 1,
+      "visual_goal": "End with a viewer question and clear uncertainty",
+      "shot_type": "reveal",
+      "style": "scientific-scale",
+      "camera_rule": "locked overview",
+      "transition_in": "diagram-transform",
+      "transition_out": "cut"
     }
-  ]
+  ],
+  "topic": "space",
+  "ratio": "9:16",
+  "duration": 30
 }
