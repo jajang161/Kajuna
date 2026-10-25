@@ -39,6 +39,10 @@ Baca `docs/what-if-labs-style-guide.md` dan gunakan tepat **satu gaya dominan** 
 
 Alternatif studi visual: `docs/gallery/13-cosmic-scale.svg` (di luar daftar 10). Gambar tidak boleh diperlakukan sebagai fakta ilmiah atau desain karakter yang wajib disalin persis.
 
+## ElevenLabs otomatis (bila dipilih user)
+
+Gunakan `docs/what-if-labs-elevenlabs.md` dan `scripts/what-if-labs-auto.mjs`. Alur ini membuat VO Inggris melalui ElevenLabs ber-timestamp, subtitle Inggris, teks terjemahan dan subtitle Indonesia (terjemahan ditulis/ditinjau agen sebelum TTS), SFX opsional, dan MP4 setelah visual timeline tersedia. Jangan mewajibkan CapCut manual jika pengguna memilih otomatis. Jangan mengaku TTS/SFX telah dihasilkan bila belum ada API key dan panggilan nyata; simpan key hanya di environment privat. Validasi 12 adegan tanpa biaya sebelum generate.
+
 ## Urutan produksi What If Labs
 
 1. **Tentukan subjek yang baru dan spesifik.** Variasikan space di luar Bumi, tubuh manusia, teknologi, fisika, alam, hewan/prasejarah, sejarah alternatif, eksobiologi, realitas alternatif. Catat fakta, asumsi, dan ketidakpastian. Jika klaim berisiko salah, periksa sumber tepercaya yang relevan.
