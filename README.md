@@ -42,6 +42,11 @@ It also stops every project from looking the same. The look is **derived from yo
 
 Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?debug=1` for a scrub bar, and an optional frame-by-frame export to MP4.
 
+
+## What If Labs — automatic visual QA preflight
+
+The optional [visual director and QA guide](docs/what-if-labs-visual-director.md) adds topic-based style suggestions and a strict 12-scene manifest validator: `node scripts/validate-what-if-labs-plan.mjs examples/what-if-labs-storyboard.example.json`. Checks cover scene timing, diversity, shot purpose, camera repetition, transitions, bilingual lines, and English narration length. `scripts/what-if-labs-auto.mjs` now blocks paid TTS and render when preflight fails. This is **static preflight**, not visual verification of a rendered video.
+
 ## What If Labs — ElevenLabs automation
 
 Brew Production includes an opt-in workflow for **12 synchronized 2.5-second scenes** across **3 × 10-second clips**. A planning agent writes English narration, Indonesian translation, scene instructions, and sound cues; the script then requests ElevenLabs English TTS with timestamps, optionally generates SFX, creates bilingual subtitles, and renders 9:16 H.264/AAC MP4. **No ElevenLabs calls are made unless `--generate` is supplied.** Effects require `--with-sfx --sfx-confirm yes`. Your API key remains in a private environment variable.
