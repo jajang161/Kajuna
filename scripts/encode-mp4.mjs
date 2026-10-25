@@ -13,17 +13,17 @@ const frames=resolve(opts.frames),output=resolve(opts.output);
 const files=(await readdir(frames)).filter(f=>/^f\d{5}\.png$/.test(f)).sort();
 if(!files.length)throw Error('No PNG frames f00000.png... found');
 for(let i=0;i<files.length;i++)if(files[i]!==`f${String(i).padStart(5,'0')}.png`)throw Error('Missing frame '+i);
-const audio=[opts.narration||opts.audio,opts.music,opts.sfx].filter(Boolean);
+const audio=[['narration',opts.narration||opts.audio,1],['music',opts.music,.20],['sfx',opts.sfx,.65]].filter(([,file])=>Boolean(file));
 if(opts.requireAudio&&!audio.length)throw Error('Audio requested but no audio files supplied');
-for(const f of audio){const s=await stat(resolve(f)).catch(()=>null);if(!s?.isFile()||!s.size)throw Error('Audio file missing or empty: '+f);}
+for(const [,f] of audio){const s=await stat(resolve(f)).catch(()=>null);if(!s?.isFile()||!s.size)throw Error('Audio file missing or empty: '+f);}
 cmd('ffmpeg',['-version']);cmd('ffprobe',['-version']);
 await mkdir(dirname(output),{recursive:true});
 const duration=files.length/fps;
 const args=['-y','-hide_banner','-loglevel','error','-framerate',String(fps),'-start_number','0','-i',join(frames,'f%05d.png')];
-audio.forEach((f,i)=>{if(i===1&&opts.music)args.push('-stream_loop','-1');args.push('-i',resolve(f));});
+audio.forEach(([role,f],i)=>{if(role==='music')args.push('-stream_loop','-1');args.push('-i',resolve(f));});
 args.push('-map','0:v:0','-c:v','libx264','-preset','medium','-crf','18','-pix_fmt','yuv420p','-frames:v',String(files.length),'-movflags','+faststart');
 if(audio.length){
- const filters=audio.map((_,i)=>`[${i+1}:a:0]aresample=48000,aformat=channel_layouts=stereo,volume=${i===0?1:i===1?.20:.65},apad,atrim=duration=${duration},asetpts=PTS-STARTPTS[a${i}]`);
+ const filters=audio.map(([,,volume],i)=>`[${i+1}:a:0]aresample=48000,aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${volume},apad,atrim=duration=${duration},asetpts=PTS-STARTPTS[a${i}]`);
  filters.push((audio.map((_,i)=>`[a${i}]`).join(''))+`amix=inputs=${audio.length}:duration=longest:dropout_transition=0,alimiter=limit=0.95[outa]`);
  args.push('-filter_complex',filters.join(';'),'-map','[outa]','-c:a','aac','-b:a','192k','-ar','48000');
 }else args.push('-an');
