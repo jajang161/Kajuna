@@ -5,6 +5,7 @@ import {resolve,join,dirname} from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {validateEpisode} from './what-if-labs-visual-director.mjs';
 import {auditOriginality} from './what-if-labs-originality.mjs';
+import {checkHybridAssets} from './what-if-labs-hybrid-preflight.mjs';
 
 const args=process.argv.slice(2),cfg={};
 for(let i=0;i<args.length;i++){
@@ -29,6 +30,12 @@ const history=JSON.parse(await readFile(historyPath,'utf8'));
 const originality=auditOriginality(plan,history);
 if(!originality.ok)throw Error('Originality / policy preflight failed before API calls:\n'+originality.errors.join('\n'));
 for(const warning of originality.warnings)console.warn('Editorial review warning: '+warning);
+if(cfg.generate&&(plan.scenes.some(s=>s.medium==='higgsfield')||cfg['require-hybrid-assets'])){
+ const report=await checkHybridAssets(plan,resolve(cfg.project||dirname(input)),{strict:true});
+ if(!report.ok)throw Error('Hybrid assets not ready before paid TTS:\n'+report.errors.join('\n'));
+ for(const warning of report.warnings)console.warn('Hybrid QA warning: '+warning);
+}
+
 const out=resolve(cfg.out||join(dirname(input),'what-if-labs-output'));
 await mkdir(out,{recursive:true});
 const ss=n=>{let v=Math.round(n*1000);const h=Math.floor(v/3600000);v%=3600000;const m=Math.floor(v/60000);v%=60000;return [h,m,Math.floor(v/1000)].map(x=>String(x).padStart(2,'0')).join(':')+','+String(v%1000).padStart(3,'0')};
