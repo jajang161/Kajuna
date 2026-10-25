@@ -42,6 +42,12 @@ It also stops every project from looking the same. The look is **derived from yo
 
 Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?debug=1` for a scrub bar, and an optional frame-by-frame export to MP4.
 
+## What If Labs — ElevenLabs automation
+
+Brew Production includes an opt-in workflow for **12 synchronized 2.5-second scenes** across **3 × 10-second clips**. A planning agent writes English narration, Indonesian translation, scene instructions, and sound cues; the script then requests ElevenLabs English TTS with timestamps, optionally generates SFX, creates bilingual subtitles, and renders 9:16 H.264/AAC MP4. **No ElevenLabs calls are made unless `--generate` is supplied.** Effects require `--with-sfx --sfx-confirm yes`. Your API key remains in a private environment variable.
+
+Start with [the ElevenLabs production guide](docs/what-if-labs-elevenlabs.md), the [12-scene example](examples/what-if-labs-storyboard.example.json), and `scripts/what-if-labs-auto.mjs`. A working 30-second HTML visual timeline and the necessary render tools are still required. Credits may be charged for the ElevenLabs API calls.
+
 ## MP4 video export and audio (Brew Production)
 
 For a **downloadable video**, deliver an actual H.264 MP4 rather than HTML or a ZIP alone. The Brew Production fork provides a rendering pipeline that captures HTML frames with Puppeteer, encodes them using FFmpeg, optionally mixes supplied narration/music/SFX, and validates the resulting video with FFprobe.
