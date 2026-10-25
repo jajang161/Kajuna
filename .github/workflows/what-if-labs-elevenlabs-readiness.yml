@@ -1,0 +1,26 @@
+name: ElevenLabs Connection Readiness (No Credits)
+on:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+    steps:
+      - name: Check secret configuration only (no API calls)
+        shell: bash
+        run: |
+          if [[ -z "$ELEVENLABS_API_KEY" ]]; then
+            echo "::error::ELEVENLABS_API_KEY is missing. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "ElevenLabs API Key secret: present (value hidden)."
+          if [[ -z "$ELEVENLABS_VOICE_ID" ]]; then
+            echo "::warning::ELEVENLABS_VOICE_ID is missing. Add this repository secret before generating narration."
+          else
+            echo "ElevenLabs Voice ID secret: present (value hidden)."
+          fi
+          echo "Configuration check only. No ElevenLabs request or credits used."
