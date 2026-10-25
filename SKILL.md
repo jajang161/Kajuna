@@ -27,6 +27,11 @@ Jika pengguna meminta suara, jangan sepihak membuat animasi tanpa suara. Siapkan
 
 Izin menjalankan perintah Codex adalah mekanisme keamanan platform yang tidak dapat dimatikan melalui skill; gabungkan operasi aman jika memungkinkan tanpa melewati kontrol izin.
 
+
+### What If Labs — visual QA preflight
+
+Sebelum TTS/MP4, jalankan `node scripts/validate-what-if-labs-plan.mjs <manifest.json>` dan ikuti `docs/what-if-labs-visual-director.md`. Gunakan pemilihan gaya berdasarkan topik, metadata shot/camera/transition per scene, dan hentikan produksi bila validasi gagal. Validasi manifest **tidak** membuktikan kualitas video terender; periksa frame dan sinkronisasi akhir secara terpisah.
+
 ## What If Labs — ElevenLabs otomatis (opsional)
 
 **Hanya untuk What If Labs:** baca `docs/what-if-labs-elevenlabs.md` dan gunakan `scripts/what-if-labs-auto.mjs` sebagai alur audio/video bila user memilih ElevenLabs. Rancang visual + narasi Inggris singkat + terjemahan Indonesia + cue SFX sebagai **12 adegan**, 3 klip × 10 detik (masing-masing empat adegan 2,5 detik). Buat `index.html` 9:16 tepat 30 detik menggunakan motion timeline Bang Motion, dan manifest episode mengikuti `examples/what-if-labs-storyboard.example.json`. Terjemahkan secara semantik dan cek fakta; API ElevenLabs **hanya TTS/SFX**, bukan otomatis menulis terjemahan atau animasi. Validasi manifest tanpa biaya terlebih dahulu; jika key, voice ID atau lingkungan belum tersedia, jangan mengklaim video siap.
