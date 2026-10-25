@@ -1,0 +1,138 @@
+{
+  "title": "EXAMPLE ONLY — replace with a scientifically researched What If Labs episode",
+  "format": "3 clips x 10s / 4 scenes per clip",
+  "scenes": [
+    {
+      "id": 1,
+      "clip": 1,
+      "start": 0,
+      "end": 2.5,
+      "visual": "Cold open: reveal a distant planet",
+      "narration_en": "What if the orbit changed?",
+      "translation_id": "Bagaimana jika orbitnya berubah?",
+      "sfx": "cinematic gentle whoosh",
+      "sfx_duration": 1
+    },
+    {
+      "id": 2,
+      "clip": 1,
+      "start": 2.5,
+      "end": 5,
+      "visual": "Camera pushes toward the atmosphere",
+      "narration_en": "First, watch the atmosphere.",
+      "translation_id": "Pertama, perhatikan atmosfernya.",
+      "sfx": "subtle airy swell",
+      "sfx_duration": 1
+    },
+    {
+      "id": 3,
+      "clip": 1,
+      "start": 5,
+      "end": 7.5,
+      "visual": "Comparison diagram of orbital distances",
+      "narration_en": "The distance matters a lot.",
+      "translation_id": "Jarak sangat berpengaruh.",
+      "sfx": "soft diagram click",
+      "sfx_duration": 1
+    },
+    {
+      "id": 4,
+      "clip": 1,
+      "start": 7.5,
+      "end": 10,
+      "visual": "A bright highlight marks the key variable",
+      "narration_en": "Here's the biggest variable.",
+      "translation_id": "Inilah variabel terpenting.",
+      "sfx": "quiet highlight ping",
+      "sfx_duration": 1
+    },
+    {
+      "id": 5,
+      "clip": 2,
+      "start": 10,
+      "end": 12.5,
+      "visual": "Wide view of two orbits",
+      "narration_en": "These paths could diverge.",
+      "translation_id": "Lintasan ini dapat menyimpang.",
+      "sfx": "cinematic gentle whoosh",
+      "sfx_duration": 1
+    },
+    {
+      "id": 6,
+      "clip": 2,
+      "start": 12.5,
+      "end": 15,
+      "visual": "Close-up illustrating gravitational pull",
+      "narration_en": "Gravity changes the motion.",
+      "translation_id": "Gravitasi mengubah gerakan.",
+      "sfx": "subtle airy swell",
+      "sfx_duration": 1
+    },
+    {
+      "id": 7,
+      "clip": 2,
+      "start": 15,
+      "end": 17.5,
+      "visual": "An arrow traces a possible path",
+      "narration_en": "One path remains possible.",
+      "translation_id": "Satu lintasan masih mungkin.",
+      "sfx": "soft diagram click",
+      "sfx_duration": 1
+    },
+    {
+      "id": 8,
+      "clip": 2,
+      "start": 17.5,
+      "end": 20,
+      "visual": "Scale bars show relative distances",
+      "narration_en": "Scale makes this clearer.",
+      "translation_id": "Skala membuatnya lebih jelas.",
+      "sfx": "quiet highlight ping",
+      "sfx_duration": 1
+    },
+    {
+      "id": 9,
+      "clip": 3,
+      "start": 20,
+      "end": 22.5,
+      "visual": "Alternate outcome A visualized",
+      "narration_en": "Here's one possible outcome.",
+      "translation_id": "Ini salah satu hasil yang mungkin.",
+      "sfx": "cinematic gentle whoosh",
+      "sfx_duration": 1
+    },
+    {
+      "id": 10,
+      "clip": 3,
+      "start": 22.5,
+      "end": 25,
+      "visual": "Alternate outcome B visualized",
+      "narration_en": "But another result could happen.",
+      "translation_id": "Namun hasil lain juga mungkin.",
+      "sfx": "subtle airy swell",
+      "sfx_duration": 1
+    },
+    {
+      "id": 11,
+      "clip": 3,
+      "start": 25,
+      "end": 27.5,
+      "visual": "Return to the whole system",
+      "narration_en": "It all depends on conditions.",
+      "translation_id": "Semuanya bergantung pada kondisi.",
+      "sfx": "soft diagram click",
+      "sfx_duration": 1
+    },
+    {
+      "id": 12,
+      "clip": 3,
+      "start": 27.5,
+      "end": 30,
+      "visual": "End with a viewer question and clear uncertainty",
+      "narration_en": "What would you predict?",
+      "translation_id": "Apa prediksi Anda?",
+      "sfx": "quiet highlight ping",
+      "sfx_duration": 1
+    }
+  ]
+}
