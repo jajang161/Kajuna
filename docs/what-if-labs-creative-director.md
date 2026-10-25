@@ -1,5 +1,8 @@
 # What If Labs — Intelligent Creative Director
 
+## Cinematic quality standard
+Read `docs/what-if-labs-cinematic-3d-standard.md` before writing prompts or building HTML. Premium three-dimensional imagery, meaningful changing visual action in all 12 scenes, no children's cards or production labels, natural non-poetic human-like English delivery. Audit the final render; static JSON validation cannot prove this visually.
+
 ## Production principle
 **Consistent channel identity; episode-specific editorial substance.** Fixed 30-second / 12-scene production structure is compatible with different questions, hook types, explanations, diagrams, camera behavior, and endings. Avoid mass-production that only changes nouns and titles.
 

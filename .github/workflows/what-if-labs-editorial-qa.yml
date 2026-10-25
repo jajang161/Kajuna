@@ -15,4 +15,5 @@ jobs:
           node-version: '22'
       - run: node --test tests/what-if-labs-*.test.mjs
       - run: node scripts/validate-what-if-labs-plan.mjs examples/what-if-labs-storyboard.example.json
+      - run: node scripts/validate-what-if-labs-cinematic.mjs examples/what-if-labs-storyboard.example.json
       - run: node scripts/what-if-labs-history.mjs check examples/what-if-labs-storyboard.example.json

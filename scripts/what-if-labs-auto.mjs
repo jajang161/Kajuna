@@ -6,6 +6,7 @@ import {spawnSync} from 'node:child_process';
 import {validateEpisode} from './what-if-labs-visual-director.mjs';
 import {auditOriginality} from './what-if-labs-originality.mjs';
 import {checkHybridAssets} from './what-if-labs-hybrid-preflight.mjs';
+import {auditCinematicPlan} from './what-if-labs-cinematic-qc.mjs';
 
 const args=process.argv.slice(2),cfg={};
 for(let i=0;i<args.length;i++){
@@ -30,6 +31,9 @@ const history=JSON.parse(await readFile(historyPath,'utf8'));
 const originality=auditOriginality(plan,history);
 if(!originality.ok)throw Error('Originality / policy preflight failed before API calls:\n'+originality.errors.join('\n'));
 for(const warning of originality.warnings)console.warn('Editorial review warning: '+warning);
+const cinematic=auditCinematicPlan(plan);
+if(!cinematic.ok)throw Error('Cinematic quality preflight failed before paid TTS:\n'+cinematic.errors.join('\n'));
+for(const warning of cinematic.warnings)console.warn('Cinematic preflight warning: '+warning);
 if(cfg.generate&&(plan.scenes.some(s=>s.medium==='higgsfield')||cfg['require-hybrid-assets'])){
  const report=await checkHybridAssets(plan,resolve(cfg.project||dirname(input)),{strict:true});
  if(!report.ok)throw Error('Hybrid assets not ready before paid TTS:\n'+report.errors.join('\n'));
