@@ -18,11 +18,14 @@ jobs:
             exit 1
           fi
           # Do not print API keys or account details; GET does not generate audio.
-          status=$(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' \
+          status=$(curl -sS --max-time 20 -o "$RUNNER_TEMP/elevenlabs-response.json" -w '%{http_code}' \
             -H "xi-api-key: $ELEVENLABS_API_KEY" \
             "https://api.elevenlabs.io/v1/user")
           if [[ "$status" != "200" ]]; then
-            echo "::error::ElevenLabs authentication failed (HTTP $status). Check the key, permissions, or account."
+            error_code=$(jq -r 'if (.detail | type) == "object" then (.detail.status // "unknown") else "unknown" end' "$RUNNER_TEMP/elevenlabs-response.json" 2>/dev/null || echo unknown)
+            case "$error_code" in missing_permissions|invalid_api_key|invalid_api_key_permissions|unauthorized|invalid_authentication|unknown) ;; *) error_code="other" ;; esac
+            echo "::error::ElevenLabs GET /v1/user failed (HTTP $status; category: $error_code). Check User Read permission, account, and key. Key remains hidden."
+            echo "::notice::If the key is Text-to-Speech-only, enable User Read on ElevenLabs or create a scoped key with User Read for this diagnostic. Failure here does not alone prove TTS permission is invalid."
             exit 1
           fi
           echo "ElevenLabs API authentication succeeded (HTTP 200). No credits used."
