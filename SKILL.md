@@ -32,6 +32,10 @@ Izin menjalankan perintah Codex adalah mekanisme keamanan platform yang tidak da
 
 Sebelum TTS/MP4, jalankan `node scripts/validate-what-if-labs-plan.mjs <manifest.json>` dan ikuti `docs/what-if-labs-visual-director.md`. Gunakan pemilihan gaya berdasarkan topik, metadata shot/camera/transition per scene, dan hentikan produksi bila validasi gagal. Validasi manifest **tidak** membuktikan kualitas video terender; periksa frame dan sinkronisasi akhir secara terpisah.
 
+## What If Labs — Agent otomatis & originalitas
+
+Ketika user meminta “Buat episode What If Labs baru”, ikuti `AGENTS.md` dan `docs/what-if-labs-creative-director.md`: periksa `data/what-if-labs-episodes.json`, riset sains, buat alur dan visual yang spesifik per topik, jalankan pemeriksaan orisinalitas sebelum memanggil layanan berbayar, dan minta persetujuan kredit. Jangan memaksa semua episode mengikuti rumus urutan shot yang sama; 3 klip × 10 detik / 12 adegan adalah batas **teknis**. Setelah episode disetujui atau dipublikasi, catat dan commit fingerprint ke riwayat agar sesi lain mengingatnya. Jangan mengklaim kelulusan monetisasi atau frame-render QC otomatis tanpa bukti.
+
 ## What If Labs — ElevenLabs otomatis (opsional)
 
 **Hanya untuk What If Labs:** baca `docs/what-if-labs-elevenlabs.md` dan gunakan `scripts/what-if-labs-auto.mjs` sebagai alur audio/video bila user memilih ElevenLabs. Rancang visual + narasi Inggris singkat + terjemahan Indonesia + cue SFX sebagai **12 adegan**, 3 klip × 10 detik (masing-masing empat adegan 2,5 detik). Buat `index.html` 9:16 tepat 30 detik menggunakan motion timeline Bang Motion, dan manifest episode mengikuti `examples/what-if-labs-storyboard.example.json`. Terjemahkan secara semantik dan cek fakta; API ElevenLabs **hanya TTS/SFX**, bukan otomatis menulis terjemahan atau animasi. Validasi manifest tanpa biaya terlebih dahulu; jika key, voice ID atau lingkungan belum tersedia, jangan mengklaim video siap.
