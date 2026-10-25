@@ -32,6 +32,10 @@ Izin menjalankan perintah Codex adalah mekanisme keamanan platform yang tidak da
 
 Sebelum TTS/MP4, jalankan `node scripts/validate-what-if-labs-plan.mjs <manifest.json>` dan ikuti `docs/what-if-labs-visual-director.md`. Gunakan pemilihan gaya berdasarkan topik, metadata shot/camera/transition per scene, dan hentikan produksi bila validasi gagal. Validasi manifest **tidak** membuktikan kualitas video terender; periksa frame dan sinkronisasi akhir secara terpisah.
 
+## What If Labs — standar visual dan suara final
+
+Wajib baca `docs/what-if-labs-cinematic-3d-standard.md` untuk setiap episode. Jangan gunakan kartu edukasi datar, teks besar menutupi frame, label teknis SCENE/CLIP, atau TTS robot sebagai produk final. Prioritaskan 3D sinematik, 12 perkembangan adegan yang nyata, kamera bermakna, narasi Inggris natural non-puitis, dan visual beragam namun tetap koheren. Lakukan quality review pada MP4 yang benar-benar terender; validasi storyboard saja tidak cukup.
+
 ## What If Labs — Agent otomatis & originalitas
 
 Ketika user meminta “Buat episode What If Labs baru”, ikuti `AGENTS.md` dan `docs/what-if-labs-creative-director.md`: periksa `data/what-if-labs-episodes.json`, riset sains, buat alur dan visual yang spesifik per topik, jalankan pemeriksaan orisinalitas sebelum memanggil layanan berbayar, dan minta persetujuan kredit. Jangan memaksa semua episode mengikuti rumus urutan shot yang sama; 3 klip × 10 detik / 12 adegan adalah batas **teknis**. Setelah episode disetujui atau dipublikasi, catat dan commit fingerprint ke riwayat agar sesi lain mengingatnya. Jangan mengklaim kelulusan monetisasi atau frame-render QC otomatis tanpa bukti.
