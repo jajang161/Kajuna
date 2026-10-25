@@ -2,6 +2,9 @@
 
 This fork extends Bang Motion's README with **ten What If Labs visual concept previews**, while retaining every upstream style and script. These are original static SVG reference artworks **not** implemented Bang Motion rendering presets or ready-made animated scenes.
 
+## Cinematic production requirement
+These SVG gallery previews are **references, not acceptable final flat-card video frames** for What If Labs. Prefer photorealistic / science-accurate 3D and meaningful camera depth, using diagrams only as a supporting layer. See `docs/what-if-labs-cinematic-3d-standard.md`. The goal is an eye-catching coherent documentary, not a children's flashcard or a fixed animation template.
+
 ## Storyboard usage
 
 Design each short around a concrete question, one testable or clearly hypothetical mechanism, and a concluding insight. For a 30-second episode, the current preferred structure is **three clips of 10 seconds** with **four distinct scenes per clip** (12 scenes overall). Keep the English CapCut voiceover separate from the video prompts, provide an Indonesian translation, and synchronize the narrative with visual changes.
