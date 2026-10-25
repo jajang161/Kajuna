@@ -1,0 +1,40 @@
+name: ElevenLabs API Authentication (No Credits)
+on:
+  workflow_dispatch:
+jobs:
+  authenticate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+    steps:
+      - name: Authenticate using read-only endpoint
+        shell: bash
+        run: |
+          if [[ -z "$ELEVENLABS_API_KEY" ]]; then
+            echo "::error::Missing ELEVENLABS_API_KEY"
+            exit 1
+          fi
+          # Do not print API keys or account details; GET does not generate audio.
+          status=$(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' \
+            -H "xi-api-key: $ELEVENLABS_API_KEY" \
+            "https://api.elevenlabs.io/v1/user")
+          if [[ "$status" != "200" ]]; then
+            echo "::error::ElevenLabs authentication failed (HTTP $status). Check the key, permissions, or account."
+            exit 1
+          fi
+          echo "ElevenLabs API authentication succeeded (HTTP 200). No credits used."
+          if [[ -z "$ELEVENLABS_VOICE_ID" ]]; then
+            echo "::warning::ELEVENLABS_VOICE_ID not configured; choose and save a voice ID before production."
+          else
+            voice_status=$(curl -sS --max-time 20 -o /dev/null -w '%{http_code}' \
+              -H "xi-api-key: $ELEVENLABS_API_KEY" \
+              "https://api.elevenlabs.io/v1/voices/$ELEVENLABS_VOICE_ID")
+            if [[ "$voice_status" == "200" ]]; then
+              echo "Configured voice ID is accessible (HTTP 200)."
+            else
+              echo "::warning::Voice ID is not accessible (HTTP $voice_status)."
+            fi
+          fi
