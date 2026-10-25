@@ -47,6 +47,10 @@ Every deliverable is one `index.html`: double-click to play, autoplay + loop, `?
 
 The optional [visual director and QA guide](docs/what-if-labs-visual-director.md) adds topic-based style suggestions and a strict 12-scene manifest validator: `node scripts/validate-what-if-labs-plan.mjs examples/what-if-labs-storyboard.example.json`. Checks cover scene timing, diversity, shot purpose, camera repetition, transitions, bilingual lines, and English narration length. `scripts/what-if-labs-auto.mjs` now blocks paid TTS and render when preflight fails. This is **static preflight**, not visual verification of a rendered video.
 
+## What If Labs — AI agent creative direction
+
+From the repository root, Codex agents should read [AGENTS.md](AGENTS.md) and the [Intelligent Creative Director guide](docs/what-if-labs-creative-director.md) before building a What If Labs episode. The workflow includes a committed [episode history](data/what-if-labs-episodes.json), a content similarity/preflight gate, topic-specific visual choices and flexible story structure. To start: **“Buat episode What If Labs baru.”** This triggers planning and checks, not automatic billing or publication. After approving/publishing, register the episode using `node scripts/what-if-labs-history.mjs register <episode.json>` and commit the changed history. Static checks do not guarantee original content, perfect output, or YouTube monetization.
+
 ## What If Labs — ElevenLabs automation
 
 Brew Production includes an opt-in workflow for **12 synchronized 2.5-second scenes** across **3 × 10-second clips**. A planning agent writes English narration, Indonesian translation, scene instructions, and sound cues; the script then requests ElevenLabs English TTS with timestamps, optionally generates SFX, creates bilingual subtitles, and renders 9:16 H.264/AAC MP4. **No ElevenLabs calls are made unless `--generate` is supplied.** Effects require `--with-sfx --sfx-confirm yes`. Your API key remains in a private environment variable.
