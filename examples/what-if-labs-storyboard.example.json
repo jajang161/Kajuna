@@ -209,5 +209,17 @@
   ],
   "topic": "space",
   "ratio": "9:16",
-  "duration": 30
+  "duration": 30,
+  "episode_id": "example-two-moons-001",
+  "category": "space",
+  "story_approach": "scientific-cause-effect",
+  "learning_objective": "Explain how a hypothetical extra moon could affect orbits and tides under specified mass and distance assumptions.",
+  "hypothesis_label": true,
+  "youtube_ai_disclosure_reviewed": true,
+  "rights_reviewed": true,
+  "production_rationale": "Use an AI shot only for a hypothetical sky establishing view; use original Bang Motion diagrams for orbital mechanics.",
+  "scientific_sources": [
+    "https://science.nasa.gov/moon/"
+  ],
+  "publication_status": "planned"
 }
