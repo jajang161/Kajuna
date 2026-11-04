@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+*.env
+paper_state.json
+paper_trades.jsonl
+*.tmp
